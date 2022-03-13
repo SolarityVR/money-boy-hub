@@ -52,10 +52,10 @@
             </a-entity>
 
             <!-- models-->
-            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#gallery-gltf" position="0 0 0"
+            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#gallery-gltf" position="0 -0.7 0"
                           scale="1 1 1"></a-gltf-model>
             <!-- nav-mesh: protecting us from running thru walls  -->
-            <a-entity id="navmesh" class="model" gltf-model="#navmesh-gltf" visible="false">
+            <a-entity id="navmesh" class="model" gltf-model="#navmesh-gltf" visible="true" position="0 -0.5 0">
             </a-entity>
 
             <!-- lights  -->
@@ -147,7 +147,7 @@
             </a-entity>
             <!-- portals -->
             <a-image width="2.3" height="2.9" class="clickable nocollision" simple-link="href: ../hub/hub_mouse.html"
-                     src="#hub-img" position="8.1 2.6 0" rotation="0 -90 0" material=" shader: liquid-portal">
+                     src="#hub-img" position="8.1 1.6 0" rotation="0 -90 0" material=" shader: liquid-portal">
                 <a-box color="white" width="2.5" position="0 -1.5 0" height="0.1" depth="0.1"></a-box>
                 <a-box color="white" width="2.5" position="0 1.5 0" height="0.1" depth="0.1"></a-box>
                 <a-box color="white" width="0.1" position="1.2 0 0" height="2.9" depth="0.1"></a-box>
