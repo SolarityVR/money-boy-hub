@@ -2,7 +2,7 @@
     padding-top: 30%;
     height: 100%;
     width: 100%;
-    background-color: #DD99FF;
+    background-color: #BB66DD;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -16,7 +16,7 @@
     font-size: 3em;
     text-align: center;
     margin: auto;
-    text-shadow: 2px 2px 8px #DD00FF;
+    text-shadow: 2px 2px 8px #8822AA;
 }
 
 #loading_bar {
@@ -28,7 +28,7 @@
     border: solid 2px #44FFFF;
     display: flex;
     padding: 2px;
-    box-shadow: 2px 2px 8px #DD00FF;
+    box-shadow: 2px 2px 8px #8822AA;
     margin-top: 1rem;
 }
 
@@ -55,14 +55,14 @@
     font-family: monospace;
     color: #44FFFF;
     width: 80vw;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
     margin: auto;
     text-shadow: 2px 2px 8px #DD00FF;
     margin-top: 2rem;
 }
 #loading_logo {
-    width: 10rem;
+    width: 6rem;
     position: absolute;
     left: 50%;
     top: 100%;
