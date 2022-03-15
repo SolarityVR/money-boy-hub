@@ -9,7 +9,6 @@ var models_number;
 var models_loaded = 0;
 //builds loading screen when scene is not loaded
 function build_loading_screen() {
-    console.log("built")
     loading_textEl.innerHTML = "LOADING SCENE";
     var loading_bar_itemEL = document.createElement('div');
     loading_barEl.appendChild(loading_bar_itemEL);
