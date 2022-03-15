@@ -21,3 +21,20 @@ function intersectedCleared() {
     this.setAttribute('opacity', '1.0');
 }
 
+function choose_controls() {
+    let url = new URL(window.location.href);
+    let searchParams = new URLSearchParams(url.search);
+    var controls = searchParams.get('controls');
+    if (controls == "mouse") {
+        document.querySelectorAll('.controllerOnly').forEach(e => e.remove());
+    } else if (controls == "controller") {
+        document.querySelectorAll('.mouseOnly').forEach(e => e.remove());
+    }
+}
+
+function pass_controls() {
+    let url = new URL(window.location.href);
+    let searchParams = new URLSearchParams(url.search);
+    var controls = searchParams.get('controls');
+    document.querySelectorAll('[simple-link]').forEach(e => e.setAttribute("simple-link", e.getAttribute("simple-link") + "?controls=" + controls));
+}

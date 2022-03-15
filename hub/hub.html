@@ -27,6 +27,10 @@
         </div>
         <div id="loading_bar">
         </div>
+        <div id="loading_label">
+            POWERED BY SOLARITY
+            <img id="loading_logo" src="../shared/assets/images/loading_logo.png" />
+        </div>
     </div>
     <div id="scene_wrapper" style="opacity: 0;">
         <a-scene renderer="antialias: false;
@@ -80,13 +84,13 @@
                 <a-entity simple-navmesh-constraint="navmesh:#navmesh;fall:0.5;height:1.65;" id="head"
                           camera="fov: 80; active: true" position="0 1.65 0" wasd-controls="acceleration: 20;"
                           look-controls="pointerLockEnabled: true; reverseMouseDrag: false">
-                    <a-entity id="cursor" cursor raycaster="far: 10; objects: .clickable"
+                    <a-entity id="cursor" class="mouseOnly" cursor raycaster="far: 10; objects: .clickable"
                               material="color: white; shader: flat" position="0 0 -0.3"
                               geometry="primitive: sphere; radius: 0.001">
                     </a-entity>
                 </a-entity>
                 <!-- Left Controller   -->
-                <a-entity id="leftHand" class="leftController"
+                <a-entity id="leftHand" class="leftController controllerOnly"
                           hand-controls="hand: left; handModelStyle: lowPoly; color: #15ACCF"
                           laser-controls="hand: left" vive-controls="hand: left" oculus-touch-controls="hand: left"
                           windows-motion-controls="hand: left" daydream-controls="hand: left"
@@ -96,7 +100,7 @@
                           blink-controls="cameraRig: #player; teleportOrigin: #camera; button: trigger; curveShootingSpeed: 10; collisionEntities: .collision; landingMaxAngle: 10"
                           visible="true"></a-entity>
                 <!-- Right Controller  -->
-                <a-entity id="rightHand" class="rightController"
+                <a-entity id="rightHand" class="rightController controllerOnly"
                           hand-controls="hand: right; handModelStyle: lowPoly; color: #15ACCF"
                           laser-controls="hand: right" vive-controls="hand: right" oculus-touch-controls="hand: right"
                           windows-motion-controls="hand: right" daydream-controls="hand: right"
@@ -350,17 +354,6 @@
 <script>
     //acquiring sceneEL
     var sceneEl = document.querySelector('a-scene');
-    function choose_controls() {
-        let url = new URL(window.location.href);
-        let searchParams = new URLSearchParams(url.search);
-        let controls = searchParams.get('controls');
-        if (controls == "mouse") {
-            document.querySelector('#leftHand').remove();
-            document.querySelector('#rightHand').remove();
-        } else if (controls == "controller") {
-            document.querySelector('#cursor').remove();
-        }
-    }
     //basically builds all of the dinamic content
     function build_dynamic_content() {
         start_screens();
@@ -378,6 +371,7 @@
     function start_scene() {
         build_dynamic_content();
         choose_controls();
+        pass_controls();
     }
     check_scene();
 
