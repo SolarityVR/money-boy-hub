@@ -36,5 +36,5 @@ function pass_controls() {
     let url = new URL(window.location.href);
     let searchParams = new URLSearchParams(url.search);
     var controls = searchParams.get('controls');
-    document.querySelectorAll('[simple-link]').forEach(e => e.setAttribute("simple-link", e.getAttribute("simple-link") + "?controls=" + controls));
+    document.querySelectorAll('[simple-link]').forEach(e => e.components["simple-link"].attrValue.href += ("?controls=" + controls));
 }
