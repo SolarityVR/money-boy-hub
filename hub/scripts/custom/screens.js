@@ -109,12 +109,12 @@ function build_nft() {
     var nft_item_amountEL = document.createElement('a-text');
     nft_containerEl.appendChild(nft_item_amountEL);
     nft_item_amountEL.setAttribute('value', nft.price);
-    nft_item_amountEL.setAttribute('wrap-count', 20);
+    nft_item_amountEL.setAttribute('wrap-count', 15);
     nft_item_amountEL.setAttribute('baseline', "top");
     nft_item_amountEL.setAttribute('x-offset', 0.05);
     nft_item_amountEL.setAttribute("width", 3);
     nft_item_amountEL.setAttribute("align", "center");
-    nft_item_amountEL.setAttribute('position', { x: 0, y: -1.5, z: 0.01 });
+    nft_item_amountEL.setAttribute('position', { x: 0, y: -1.45, z: 0.01 });
     nft_item_amountEL.setAttribute("color", "#AAEEFF");
 
 
