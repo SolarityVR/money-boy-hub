@@ -16,6 +16,7 @@ function build_loading_screen() {
 }
 //updates loading screen based on models actually loaded
 function update_loading_screen() {
+    setTimeout( function() { scene_wrapperEl.removeAttribute("style"); }, 10000);
     models_loaded++;
     if (models_loaded == 1) {
         //remove the old bar item when the first model is loaded
