@@ -1,40 +1,24 @@
+const urlBase = "https://solarity.muhash.com/api";
+const apiCaller = axios.create({
+    baseURL: urlBase,
+    headers: {
+        "Content-Type": "application/json",
+    },
+});
+var twitter_array;
+apiCaller
+    .get("/test/tweets/SolanaMoneyBoys")
+    .then((data) => {
+        console.log(data.data.data);
+        twitter_array = data.data.data;
+    })
+    .catch((err) => {
+    });
 //twitter
 const TWITTER_TO_DISPLAY = 4;
 var twitter_start_index = 0;
 var twitter_itemEL_array = [];
 var twitter_containerEl = document.getElementById('twitter');
-let twitter_array = [
-    {
-        "title": "twit1",
-        "twitter_itemId": "1",
-        "content": "Nulla sodales nulla eget purus lobortis dictum."
-    },
-    {
-        "title": "twit2",
-        "twitter_itemId": "2",
-        "content": "Mauris euismod, purus nec porta commodo, mi felis luctus purus, sit amet euismod nunc urna eget lorem. Curabitur risus tortor, ultricies sit amet tellus a, tristique mattis nisl. Suspendisse in eleifend odio. Nunc justo sem, fringilla at ornare eu, blandit at ante. Donec eget vulputate ligula. "
-    },
-    {
-        "title": "twit3",
-        "twitter_itemId": "3",
-        "content": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed vehicula varius aliquet. Suspendisse nibh metus, tempus eu quam eu, pharetra viverra tellus."
-    },
-    {
-        "title": "twit4",
-        "twitter_itemId": "4",
-        "content": "Mauris euismod, purus nec porta commodo, mi felis luctus purus, sit amet euismod nunc urna eget lorem. Curabitur risus tortor, ultricies sit amet tellus a, tristique mattis nisl. Suspendisse in eleifend odio. Nunc justo sem, fringilla at ornare eu, blandit at ante. Donec eget vulputate ligula. "
-    },
-    {
-        "title": "twit5",
-        "twitter_itemId": "5",
-        "content": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed vehicula varius aliquet. Suspendisse nibh metus, tempus eu quam eu, pharetra viverra tellus."
-    },
-    {
-        "title": "twit6",
-        "twitter_itemId": "6",
-        "content": "Hakuna matata"
-    }
-]
 function build_twitter() {
     for (let twitter_item of twitter_array) {
         var twitter_itemEL = document.createElement('a-plane');
@@ -51,24 +35,25 @@ function build_twitter() {
         twitter_itemEL.setAttribute('src', "#tweet-img");
 
 
-        var twitter_item_titleEL = document.createElement('a-text');
-        twitter_itemEL.appendChild(twitter_item_titleEL);
-        twitter_item_titleEL.setAttribute('value', twitter_item.title);
-        twitter_item_titleEL.setAttribute('wrap-count', 40);
-        twitter_item_titleEL.setAttribute('baseline', "top");
-        twitter_item_titleEL.setAttribute('x-offset', 0.05);
-        twitter_item_titleEL.setAttribute("width", 2.7);
-        twitter_item_titleEL.setAttribute('position', { x: -1.4, y: 0.3, z: 0.01 });
-        twitter_item_titleEL.setAttribute("color", "#AAEEFF");
+        var twitter_item_dateEL = document.createElement('a-text');
+        twitter_itemEL.appendChild(twitter_item_dateEL);
+        twitter_item_dateEL.setAttribute('value', twitter_item.created_at);
+        twitter_item_dateEL.setAttribute('wrap-count', 80);
+        twitter_item_dateEL.setAttribute('baseline', "top");
+        twitter_item_dateEL.setAttribute('x-offset', -0.15);
+        twitter_item_dateEL.setAttribute("width", 2.7);
+        twitter_item_dateEL.setAttribute("align", "right");
+        twitter_item_dateEL.setAttribute('position', { x: 1.4, y: -0.27, z: 0.01 });
+        twitter_item_dateEL.setAttribute("color", "#AAEEFF");
 
         var twitter_item_textEL = document.createElement('a-text');
         twitter_itemEL.appendChild(twitter_item_textEL);
-        twitter_item_textEL.setAttribute('value', twitter_item.content);
+        twitter_item_textEL.setAttribute('value', twitter_item.full_text);
         twitter_item_textEL.setAttribute('wrap-count', 60);
         twitter_item_textEL.setAttribute('baseline', "top");
         twitter_item_textEL.setAttribute('x-offset', 0.05);
         twitter_item_textEL.setAttribute("width", 2.7);
-        twitter_item_textEL.setAttribute('position', { x: -1.4, y: 0.15, z: 0.01 });
+        twitter_item_textEL.setAttribute('position', { x: -1.4, y: 0.3, z: 0.01 });
     }
     twitter_itemEL_array = document.getElementsByClassName("twitter_item");
     build_twitter_listeners();
@@ -138,13 +123,13 @@ function startGif() {
     if (gif_img_index < gif_img_array.length - 1)
         gif_img_index++;
     else
-    gif_img_index = 0;
+        gif_img_index = 0;
 }
 
 function start_screens() {
     build_twitter();
     build_nft();
-    var intervalId = window.setInterval(function(){
+    var intervalId = window.setInterval(function () {
         startGif();
     }, 500);
 }
