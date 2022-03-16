@@ -51,7 +51,9 @@
     animation-iteration-count: infinite;
 }
 #loading_label {
-    position: relative;
+    position: absolute;
+    right: -30%;
+    bottom: 30%;
     font-family: monospace;
     color: #44FFFF;
     width: 80vw;
@@ -117,3 +119,14 @@
         transform: translateX(-50%) rotate(360deg); 
     } 
 }
+
+@media only screen and (max-width: 600px) {
+    #loading_label {
+        position: relative;
+        right: 0%;
+        bottom: 0%;
+    }
+    #loading_screen {
+        padding-top: 80%;
+    }
+  }
