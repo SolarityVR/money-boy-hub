@@ -16,7 +16,7 @@ AFRAME.registerComponent('seat', {
         state: { type: 'string', default: 'standing' },
         camera: { type: 'selector' },
         height: { type: 'number', default: 1 },
-        standUpPosition: { type: 'vec3', default: "1 1.6 1" },
+        standUpPosition: { type: 'vec3', default: {x: 1, y: 1.65, z: 1} },
         duration: { type: 'number' }
     },            
     //using events ensures that event handlers properly clean themselves up when the entity or scene is paused, or the component is detached.
