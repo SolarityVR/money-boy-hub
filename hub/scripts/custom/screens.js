@@ -86,8 +86,8 @@ function build_twitter_listeners() {
 var nft_containerEl = document.getElementById('nft');
 let nft =
 {
-    "image": "assets/images/try.png",
-    "price": "1000"
+    "image": "assets/images/nft_placeholder.jpeg",
+    "price": "17.36 SOL"
 }
 function build_nft() {
 
