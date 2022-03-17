@@ -6,7 +6,7 @@ AFRAME.registerComponent('simple-link', {
     },
     init: function () {
         this.el.addEventListener('click', (e) => {
-            window.open(this.data.href, this.data.target);
+            window.open(this.attrValue.href, this.data.target);
         });
     }
 });
