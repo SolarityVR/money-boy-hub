@@ -13,6 +13,7 @@ apiCaller
         twitter_array = data.data.data;
     })
     .catch((err) => {
+        twitter_array = [{"created_at": "no data", "full_text": "no data"}];
     });
 //twitter
 const TWITTER_TO_DISPLAY = 4;
@@ -27,7 +28,6 @@ function build_twitter() {
         twitter_itemEL.classList.add("clickable");
         twitter_itemEL.classList.add("nocollision");
         twitter_itemEL.classList.add("twitter_item");
-        twitter_itemEL.setAttribute('id', "'" + twitter_item.twitter_itemId + "'");
         twitter_itemEL.setAttribute('width', 2.8);
         twitter_itemEL.setAttribute('height', 0.7);
         twitter_itemEL.setAttribute('color', "#AA44BB");
