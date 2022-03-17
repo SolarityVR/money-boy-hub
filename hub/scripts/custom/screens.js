@@ -13,7 +13,7 @@ apiCaller
         twitter_array = data.data.data;
     })
     .catch((err) => {
-        twitter_array = [{"created_at": "no data", "full_text": "no data"}];
+        twitter_array = [{ "created_at": "no data", "full_text": "no data" }];
     });
 //twitter
 const TWITTER_TO_DISPLAY = 4;
@@ -84,16 +84,20 @@ function build_twitter_listeners() {
 
 //nft
 var nft_containerEl = document.getElementById('nft');
-let nft =
-{
-    "image": "assets/images/nft_placeholder.jpeg",
-    "price": "17.36 SOL"
-}
+var nft;
+apiCaller
+    .get("/test/collections/solana_money_boys")
+    .then((data) => {
+        nft = data.data.collection;
+    })
+    .catch((err) => {
+        nft = [{ "floorPrice": "no data", "image": "no data" }];
+    });
 function build_nft() {
 
     var nft_item_amountEL = document.createElement('a-text');
     nft_containerEl.appendChild(nft_item_amountEL);
-    nft_item_amountEL.setAttribute('value', nft.price);
+    nft_item_amountEL.setAttribute('value', nft.floorPrice);
     nft_item_amountEL.setAttribute('wrap-count', 15);
     nft_item_amountEL.setAttribute('baseline', "top");
     nft_item_amountEL.setAttribute('x-offset', 0.05);
