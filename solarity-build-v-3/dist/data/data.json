@@ -1,0 +1,85 @@
+{
+    "loadAssets": [
+        {
+            "contentId": "m-1",
+            "type": "img",
+            "url": "img/m-1.jpg"
+        },
+        {
+            "contentId": "m-2",
+            "type": "img",
+            "url": "img/m-2.jpg"
+        },
+        {
+            "contentId": "m-3",
+            "type": "img",
+            "url": "img/m-3.jpg"
+        },
+        {
+            "contentId": "m-4",
+            "type": "img",
+            "url": "img/m-4.jpg"
+        },
+        {
+            "contentId": "city",
+            "type": "img",
+            "url": "img/360-images/city.jpg"
+        },
+        {
+            "contentId": "cubes",
+            "type": "img",
+            "url": "img/360-images/cubes.jpg"
+        },
+        {
+            "contentId": "sechelt",
+            "type": "img",
+            "url": "img/360-images/sechelt.jpg"
+        }
+    ],
+    "liveRoomsContent": [
+        {
+            "roomId": 1,
+            "roomName": "Money Boy Hub",
+            "roomSrc": "img/money-boy-hub.jpg",
+            "roomDescription": ""
+        },
+        {
+            "roomId": 2,
+            "roomName": "The SolGods Fracture",
+            "roomSrc": "img/sol-gods-fracture.jpg",
+            "roomDescription": ""
+        },
+        {
+            "roomId": 3,
+            "roomName": "Solarity’s plaza",
+            "roomSrc": "img/solarity-plaza.jpg",
+            "roomDescription": ""
+        }
+    ],
+    "multiScreens": [
+        "#m-1",
+        "#m-2",
+        "#m-3",
+        "#m-4",
+        "#m-2",
+        "#m-1"
+    ],
+    "screen2": [
+        {
+            "id": 1,
+            "btnLabel": "Money DAO",
+            "img": "img/money-boy-hub.jpg"
+        },
+        {
+            "id": 2,
+            "btnLabel": "SolGods DAO",
+            "img": "img/sol-gods-fracture.jpg"
+        },
+        {
+            "id": 3,
+            "btnLabel": "DeDAO",
+            "img": "img/DeDAO.jpg"
+        }
+      
+    ]
+}

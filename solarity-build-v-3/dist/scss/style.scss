@@ -1,0 +1,86 @@
+// button
+$bg-gradiaent1: linear-gradient(-45deg, #6a82fb, #fc5c7d);
+$bg-gradiaent2: linear-gradient(-45deg, #0575e6, #00f260);
+$bg-gradiaent3: linear-gradient(-45deg, #ff5e62, #ff9966);
+$bg-gradiaent4: linear-gradient(-45deg, #bc4e9c, #f80759);
+$bg-gradiaent5: linear-gradient(-45deg, #6a82fb, #fc5c7d);
+$bg-gradiaent6: linear-gradient(-45deg, #817a88, #e100ff);
+$bg-gradiaent7: linear-gradient(-45deg, #4a00e0, #8e2de2);
+$bg-gradiaent8: linear-gradient(-45deg, #111, #434343);
+
+.btn-gradient-1 {
+  background: $bg-gradiaent1;
+  //  opacity: .8;
+  color: #fff;
+  border: none;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-gradient-2 {
+  background: $bg-gradiaent2;
+  //  opacity: .8;
+  color: #fff;
+  border: none;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-gradient-3 {
+  background: $bg-gradiaent3;
+  //  opacity: .8;
+  color: #fff;
+  border: none;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-gradient-4 {
+  background: $bg-gradiaent4;
+  //  opacity: .8;
+  color: #fff;
+  border: none;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-gradient-5 {
+  background: $bg-gradiaent5;
+  //  opacity: .8;
+  color: #fff;
+  border: none;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-gradient-6 {
+  background: $bg-gradiaent6;
+  //  opacity: .8;
+  color: #fff;
+  border: none;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-gradient-7 {
+  background: $bg-gradiaent7;
+  //  opacity: .8;
+  color: #fff;
+  border: none;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-gradient-dark {
+  background: $bg-gradiaent8;
+  //  opacity: .8;
+  color: #fff;
+  border: none;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn-link{
+    text-decoration: none;
+}
