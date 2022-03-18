@@ -13,7 +13,7 @@ apiCaller
         twitter_array = data.data.data;
     })
     .catch((err) => {
-        twitter_array = [{ "created_at": "no data", "full_text": "no data" }];
+        twitter_array = [{ "created_at": "no data", "full_text": "no data" }, { "created_at": "no data", "full_text": "no data" }, { "created_at": "no data", "full_text": "no data" }, { "created_at": "no data", "full_text": "no data" }, { "created_at": "no data", "full_text": "no data" }, { "created_at": "no data", "full_text": "no data" }];
     });
 //twitter
 const TWITTER_TO_DISPLAY = 4;
@@ -84,15 +84,15 @@ function build_twitter_listeners() {
 
 //nft
 var nft_containerEl = document.getElementById('nft');
-var nft;
-apiCaller
-    .get("/test/collections/solana_money_boys")
+var nft = { "floorPrice": "16.6", "image": "assets/images/nft_placeholder.jpeg" };
+/*apiCaller
+    .get("/test/collections/solana_money_boy")
     .then((data) => {
         nft = data.data.collection;
     })
     .catch((err) => {
-        nft = [{ "floorPrice": "no data", "image": "no data" }];
-    });
+        nft = { "floorPrice": "no data", "image": "assets/images/nft_placeholder.jpeg" };
+    });*/
 function build_nft() {
 
     var nft_item_amountEL = document.createElement('a-text');
