@@ -41,7 +41,12 @@
             <!-- assets management system -->
             <a-assets timeout="100000">
                 <a-asset-item id="room-gltf" src="assets/models/Normal room.glb"></a-asset-item>
+                <a-asset-item id="arcade-gltf" src="assets/models/Arcade console.glb"></a-asset-item>
+                <a-asset-item id="atm-gltf" src="assets/models/ATM.glb"></a-asset-item>
+                <a-asset-item id="chair-gltf" src="assets/models/chair.glb"></a-asset-item>
+
                 <a-asset-item id="vr-gltf" src="assets/models/VR.glb"></a-asset-item>
+                <a-asset-item id="navmesh-gltf" src="assets/models/navmesh.gltf"></a-asset-item>
 
                 <img id="hub-img" src="assets/images/hub.png">
                 <img id="sky-img" src="assets/images/sky.jpg">
@@ -83,19 +88,29 @@
             <!-- models-->
             <a-gltf-model shadow="cast: true; receive: true" class="model" src="#room-gltf" position="0 0 0"
                           scale="1 1 1"></a-gltf-model>
-            <a-gltf-model shadow="cast: true; receive: true" class="model clickable nocollision" src="#vr-gltf" simple-link="href: ../solarity-build-v-3/dist/index.html" position="0.4 1 -2.6"
+            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#arcade-gltf" position="0 0 0"
                           scale="1 1 1"></a-gltf-model>
+            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#atm-gltf" position="0 0 0"
+                          scale="1 1 1"></a-gltf-model>
+            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#chair-gltf" position="0 0 0"
+                          scale="1 1 1"></a-gltf-model>
+            <a-gltf-model shadow="cast: true; receive: true" class="model clickable nocollision" src="#vr-gltf"
+                          simple-link="href: ../solarity-build-v-3/dist/index.html" position="0.4 1 -2.6" scale="1 1 1">
+            </a-gltf-model>
             <!-- nav-mesh: protecting us from running thru walls  -->
-            <a-plane id="navmesh" visible="false" position="0 0 0" rotation="-90 0 0" width="3" height="3">
-            </a-plane>
+            <a-entity id="navmesh" class="model" gltf-model="#navmesh-gltf" visible="false" position="0 0 0">
+            </a-entity>
 
             <!-- lights  -->
-
+            <a-entity position="0 2 0" rotation="0 0 0"
+                      light="type: point; intensity:  5; distance: 10; decay: 1; color:  #FFFFFF; cast-shadow: false; shadowCameraVisible: false;">
+            </a-entity>
+            <a-entity position="2.7 1 -0.35" rotation="-30 110 0"
+                      light="type: spot; intensity:  0.2; distance:0.6; penumbra: 0.5; decay: 1; color:  #FFFFFF; cast-shadow: true; shadow-map-height: 1024; shadow-map-width: 1024; shadowCameraVisible: false;">
+            </a-entity>
             <!-- ambient light  -->
             <a-entity light="type: ambient; intensity: 0.2; color:  #FFFFFF; shadowCameraVisible: false;"></a-entity>
-            <a-entity position="0 2 0" rotation="0 0 0"
-                      light="type: point; intensity:  10; distance: 10; decay: 1; color:  #FFFFFF; cast-shadow: false; shadowCameraVisible: false;">
-            </a-entity>
+
             <!-- portals -->
             <a-image width="1.5" height="2" class="clickable nocollision" simple-link="href: ../hub/hub.html"
                      src="#hub-img" position="-1.9 1.1 2.9" rotation="0 0 0" material=" shader: liquid-portal">
