@@ -1,5 +1,4 @@
 var frameEl_array = document.getElementsByClassName("frame");
-console.log(frameEl_array)
 var frame_array = [{ "image": "assets/images/sky.jpg" }, { "image": "assets/images/sky.jpg" }, { "image": "assets/images/sky.jpg" }, { "image": "assets/images/sky.jpg" }, { "image": "assets/images/sky.jpg" }]
 function build_frames() {
     var frame_count = 0;
