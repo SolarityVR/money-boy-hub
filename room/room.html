@@ -111,6 +111,22 @@
             <!-- ambient light  -->
             <a-entity light="type: ambient; intensity: 0.2; color:  #FFFFFF; shadowCameraVisible: false;"></a-entity>
 
+            <!-- frames -->
+            <a-plane class = "frame" position="-2.25 1.65 -2.93" width="1.1" height="1.1" rotation="0 0 0" material="shader:standard;"
+                     color="#111122">
+            </a-plane>
+            <a-plane class = "frame" position="-2.98 1.84 -1.7" width="1.1" height="1.1" rotation="0 90 0" material="shader:standard;"
+                     color="#111122">
+            </a-plane>
+            <a-plane class = "frame" position="-2.98 1.47 0.42" width="1.1" height="1.1" rotation="0 90 0" material="shader:standard;"
+                     color="#111122">
+            </a-plane>
+            <a-plane class = "frame" position="-2.98 2.06 1.92" width="1.1" height="1.1" rotation="0 90 0" material="shader:standard;"
+                     color="#111122">
+            </a-plane>
+            <a-plane class = "frame" position="2.97 2.33 2.15" width="1.1" height="1.1" rotation="0 90 0" material="shader:standard;"
+                     color="#111122">
+            </a-plane>
             <!-- portals -->
             <a-image width="1.5" height="2" class="clickable nocollision" simple-link="href: ../hub/hub.html"
                      src="#hub-img" position="-1.9 1.1 2.9" rotation="0 0 0" material=" shader: liquid-portal">
@@ -127,11 +143,16 @@
 >
 <script src="../shared/scripts/custom/loading_screen.js"></script>
 <script src="../shared/scripts/custom/utils.js"></script>
+<script src="scripts/custom/frames.js"></script>
+
 
 <script>
     //acquiring sceneEL
     var sceneEl = document.querySelector('a-scene');
-
+    //basically builds all of the dinamic content
+    function build_dynamic_content() {
+        start_frames();
+    }
     //checks if scene has loaded befor building all of the dinamic content
     function check_scene() {
         if (sceneEl.hasLoaded) {
@@ -143,6 +164,7 @@
         }
     }
     function start_scene() {
+        build_dynamic_content();
         choose_controls();
         pass_controls();
     }
