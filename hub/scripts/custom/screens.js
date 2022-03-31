@@ -84,15 +84,15 @@ function build_twitter_listeners() {
 
 //nft
 var nft_containerEl = document.getElementById('nft');
-var nft = { "floorPrice": "16.6", "image": "assets/images/nft_placeholder.jpeg" };
-/*apiCaller
+var nft;
+apiCaller
     .get("/test/collections/solana_money_boy")
     .then((data) => {
         nft = data.data.collection;
     })
     .catch((err) => {
         nft = { "floorPrice": "no data", "image": "assets/images/nft_placeholder.jpeg" };
-    });*/
+    });
 function build_nft() {
 
     var nft_item_amountEL = document.createElement('a-text');
