@@ -51,6 +51,11 @@
                 <img id="hub-img" src="assets/images/hub.png">
                 <img id="sky-img" src="assets/images/sky.jpg">
 
+                <img id="gif-img1" src="assets/images/gif_img1.jpeg">
+                <img id="gif-img2" src="assets/images/gif_img2.jpeg">
+                <img id="gif-img3" src="assets/images/gif_img3.jpeg">
+                <img id="gif-img4" src="assets/images/gif_img4.jpeg">
+
             </a-assets>
 
             <!-- camera -->
@@ -112,20 +117,27 @@
             <a-entity light="type: ambient; intensity: 0.2; color:  #FFFFFF; shadowCameraVisible: false;"></a-entity>
 
             <!-- frames -->
-            <a-plane class = "frame" position="-2.25 1.65 -2.93" width="1.1" height="1.1" rotation="0 0 0" material="shader:standard;"
-                     color="#111122">
+            <a-plane class="frame" position="-2.25 1.65 -2.93" width="1.1" height="1.1" rotation="0 0 0"
+                     material="shader:standard;" color="#111122">
             </a-plane>
-            <a-plane class = "frame" position="-2.98 1.84 -1.7" width="1.1" height="1.1" rotation="0 90 0" material="shader:standard;"
-                     color="#111122">
+            <a-plane class="frame" position="-2.98 1.84 -1.7" width="1.1" height="1.1" rotation="0 90 0"
+                     material="shader:standard;" color="#111122">
             </a-plane>
-            <a-plane class = "frame" position="-2.98 1.47 0.42" width="1.1" height="1.1" rotation="0 90 0" material="shader:standard;"
-                     color="#111122">
+            <a-plane class="frame" position="-2.98 1.47 0.42" width="1.1" height="1.1" rotation="0 90 0"
+                     material="shader:standard;" color="#111122">
             </a-plane>
-            <a-plane class = "frame" position="-2.98 2.06 1.92" width="1.1" height="1.1" rotation="0 90 0" material="shader:standard;"
-                     color="#111122">
+            <a-plane class="frame" position="-2.98 2.06 1.92" width="1.1" height="1.1" rotation="0 90 0"
+                     material="shader:standard;" color="#111122">
             </a-plane>
-            <a-plane class = "frame" position="2.97 2.33 2.15" width="1.1" height="1.1" rotation="0 90 0" material="shader:standard;"
+            <a-plane class="frame" position="2.97 2.33 2.15" width="1.1" height="1.1" rotation="0 90 0"
+                     material="shader:standard;" color="#111122">
+            </a-plane>
+
+            <!-- screen  -->
+            <a-plane width="1.9" height="1.2" rotation="0 0 0" material="shader: standard;" position="0.41 1.165 2.63"
                      color="#111122">
+                <a-image id="screen_img" src="" rotation="0 0 0" width="1.95" height="1.15"
+                         position="0 0 0.01"></a-image>
             </a-plane>
             <!-- portals -->
             <a-image width="1.5" height="2" class="clickable nocollision" simple-link="href: ../hub/hub.html"
@@ -144,6 +156,7 @@
 <script src="../shared/scripts/custom/loading_screen.js"></script>
 <script src="../shared/scripts/custom/utils.js"></script>
 <script src="scripts/custom/frames.js"></script>
+<script src="scripts/custom/screen.js"></script>
 
 
 <script>
@@ -152,6 +165,7 @@
     //basically builds all of the dinamic content
     function build_dynamic_content() {
         start_frames();
+        start_screen();
     }
     //checks if scene has loaded befor building all of the dinamic content
     function check_scene() {
