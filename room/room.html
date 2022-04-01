@@ -17,6 +17,7 @@
     <script src="../shared/scripts/custom/components.js"></script>
 
     <link rel="stylesheet" href="../shared/styles/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </head>
 
@@ -134,10 +135,10 @@
             </a-plane>
 
             <!-- screen  -->
-            <a-plane width="1.9" height="1.2" rotation="0 0 0" material="shader: standard;" position="0.41 1.165 2.63"
-                     color="#111122">
-                <a-image id="screen_img" src="" rotation="0 0 0" width="1.95" height="1.15"
-                         position="0 0 0.01"></a-image>
+            <a-plane id="screen" width="2" height="1.2" rotation="0 180 0" material="shader: standard;"
+                     position="0.4065 1.16 2.63" color="#CC22FF">
+                <a-text align="center" rotation="0 0 0" width="0.9" value="FLOOR PRICE" position="0.5 0.3 0.01"
+                        x-offset="0.05" wrap-count="20" color="#FFFFFF"></a-text>
             </a-plane>
             <!-- portals -->
             <a-image width="1.5" height="2" class="clickable nocollision" simple-link="href: ../hub/hub.html"
