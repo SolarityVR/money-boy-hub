@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Hub</title>
-    <meta name="description"
-          content="">
+    <meta name="description" content="">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
     <meta name="mobile-web-app-capable" content="yes">
@@ -26,6 +25,9 @@
 </head>
 
 <body>
+    <video id="background-video" autoplay loop muted>
+        <source src="../shared/assets/video/loading_video.mp4" type="video/mp4">
+    </video>
     <div id="loading_screen">
         <div id="loading_text">
         </div>
@@ -83,7 +85,7 @@
                 <img id="gif-img3" src="assets/images/gif_img3.jpeg">
                 <img id="gif-img4" src="assets/images/gif_img4.jpeg">
 
-
+                <audio id="rap" src="assets/audio/rap.mpeg"></audio>
             </a-assets>
 
             <!-- basic movement  -->
@@ -214,8 +216,8 @@
                 <a-box color="black" width="0.1" position="0.7 0 0" height="1.9" depth="0.1"></a-box>
                 <a-box color="black" width="0.1" position="-0.7 0 0" height="1.9" depth="0.1"></a-box>
             </a-image>
-            <a-image width="2.3" height="2.9" class="clickable nocollision" simple-link="href: "
-                     src="#try-img" position="14.2 1.6 0" rotation="0 -90 0" material=" shader: liquid-portal">
+            <a-image width="2.3" height="2.9" class="clickable nocollision" simple-link="href: " src="#try-img"
+                     position="14.2 1.6 0" rotation="0 -90 0" material=" shader: liquid-portal">
                 <a-box color="black" width="2.5" position="0 -1.5 0" height="0.1" depth="0.1"></a-box>
                 <a-box color="black" width="2.5" position="0 1.5 0" height="0.1" depth="0.1"></a-box>
                 <a-box color="black" width="0.1" position="1.2 0 0" height="2.9" depth="0.1"></a-box>
@@ -350,6 +352,7 @@
             easing: linear;
             loop:true" src="#sky-img"></a-sky>
 
+            <a-entity position="0 0 0" sound="src: #rap; autoplay: true; loop: true"></a-entity>
         </a-scene>
     </div>
 </body>

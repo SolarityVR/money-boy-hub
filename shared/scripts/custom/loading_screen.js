@@ -29,6 +29,7 @@ function update_loading_screen() {
     loading_bar_itemEL.classList.add("stacking_item");
     if (models_loaded == models_number) {
         scene_wrapperEl.removeAttribute("style");
+        loading_screenEl.remove();
     };
 }
 //checks if model has loaded before building all of the dinamic content
