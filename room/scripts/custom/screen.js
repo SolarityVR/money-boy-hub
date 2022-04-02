@@ -9,7 +9,7 @@ const apiCaller = axios.create({
 var nft_containerEl = document.getElementById('screen');
 var nft;
 apiCaller
-    .get("/test/collections/solana_money_boys")
+    .get("/daos/moneyboys")
     .then((data) => {
         nft = data.data.collection;
     })
