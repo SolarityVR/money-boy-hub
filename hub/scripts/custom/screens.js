@@ -88,7 +88,7 @@ var nft;
 apiCaller
     .get("/daos/solana_money_boys")
     .then((data) => {
-        nft = data.data.collection;
+        nft = data.data.dao;
     })
     .catch((err) => {
         nft = { "floorPrice": "no data", "image": "assets/images/nft_placeholder.jpeg" };
