@@ -86,7 +86,7 @@ function build_twitter_listeners() {
 var nft_containerEl = document.getElementById('nft');
 var nft;
 apiCaller
-    .get("/test/collections/solana_money_boy")
+    .get("/daos/solana_money_boys")
     .then((data) => {
         nft = data.data.collection;
     })
