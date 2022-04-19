@@ -7,7 +7,7 @@ const apiCaller = axios.create({
 });
 //nft
 var nft_containerEl = document.getElementById('screen');
-var nft;
+var nft = { "floorPrice": "no data", "image": "assets/images/nft_placeholder.jpeg" };
 apiCaller
     .get("/daos/solana_money_boys")
     .then((data) => {
@@ -39,10 +39,31 @@ function build_nft() {
     build_nft_listeners();
 }
 
+//bank
+var bank_containerEl = document.getElementById('bank_screen');
+var bank = { "amount": "no data" };
+function build_bank() {
+
+    var bank_item_amountEL = document.createElement('a-text');
+    bank_containerEl.appendChild(bank_item_amountEL);
+    bank_item_amountEL.setAttribute('value', bank.amount);
+    bank_item_amountEL.setAttribute('wrap-count', 20);
+    bank_item_amountEL.setAttribute('baseline', "top");
+    bank_item_amountEL.setAttribute('x-offset', 0.05);
+    bank_item_amountEL.setAttribute("width", 0.9);
+    bank_item_amountEL.setAttribute('position', { x: -0.27, y: 0.0, z: 0.01 });
+    bank_item_amountEL.setAttribute("color", "#AAEEFF");
+
+    build_bank_listeners();
+}
+
 function build_nft_listeners() {
 
 }
+function build_bank_listeners() {
 
+}
 function start_screen() {
     build_nft();
+    build_bank();
 }

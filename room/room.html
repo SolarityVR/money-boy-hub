@@ -143,6 +143,12 @@
                 <a-text align="center" rotation="0 0 0" width="0.9" value="FLOOR PRICE" position="0.5 0.3 0.01"
                         x-offset="0.05" wrap-count="20" color="#FFFFFF"></a-text>
             </a-plane>
+            <!-- bank screen  -->
+            <a-plane id="bank_screen" width="0.45" height="0.25" rotation="-50 -90 0" material="shader: standard;"
+                     position="2.7 1.56 2.15" color="#CC22FF">
+                <a-text rotation="0 0 0" width="0.45" value="AMOUNT" position="-0.27 0.05 0.01" x-offset="0.05"
+                        wrap-count="20" color="#FFFFFF"></a-text>
+            </a-plane>
             <!-- portals -->
             <a-image width="1.5" height="2" class="clickable nocollision" simple-link="href: ../hub/hub.html"
                      src="#hub-img" position="-1.9 1.1 2.9" rotation="0 0 0" material=" shader: liquid-portal">
@@ -156,7 +162,7 @@
         </a-scene>
     </div>
 </body>
->
+
 <script src="../shared/scripts/custom/loading_screen.js"></script>
 <script src="../shared/scripts/custom/utils.js"></script>
 <script src="scripts/custom/frames.js"></script>
