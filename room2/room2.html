@@ -41,7 +41,7 @@
         sortObjects: true;
         physicallyCorrectLights: true;
         maxCanvasWidth: 1920;
-        maxCanvasHeight: 1920;" loading-screen="enabled:false" stats>
+        maxCanvasHeight: 1920;" shadow="autoUpdate: false" loading-screen="enabled:false" stats>
             <!-- assets management system -->
             <a-assets timeout="100000">
                 <a-asset-item id="room2-gltf" src="assets/models/room2.glb"></a-asset-item>
@@ -109,6 +109,7 @@
 
 
 <script>
+
     //acquiring sceneEL
     var sceneEl = document.querySelector('a-scene');
     //basically builds all of the dinamic content
@@ -128,6 +129,7 @@
         build_dynamic_content();
         choose_controls();
         pass_controls();
+        sceneEl.renderer.shadowMap.autoUpdate = true;
     }
     check_scene();
 </script>

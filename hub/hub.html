@@ -44,7 +44,7 @@
         sortObjects: true;
         physicallyCorrectLights: true;
         maxCanvasWidth: 1920;
-        maxCanvasHeight: 1920;" loading-screen="enabled:false" stats>
+        maxCanvasHeight: 1920;" shadow="autoUpdate: false" loading-screen="enabled:false" stats>
             <!-- assets management system -->
             <a-assets timeout="100000">
                 <a-asset-item id="headd" src="assets/models/Avatar head LOW POLY.glb"></a-asset-item>
@@ -373,6 +373,15 @@
         build_dynamic_content();
         choose_controls();
         pass_controls();
+        sceneEl.renderer.shadowMap.autoUpdate = false;
+        setInterval(function () {
+            console.log("Scene polycount:", sceneEl.renderer.info.render.triangles)
+            console.log("Active Drawcalls:", sceneEl.renderer.info.render.calls)
+            console.log("Textures in Memory", sceneEl.renderer.info.memory.textures)
+            console.log("Geometries in Memory", sceneEl.renderer.info.memory.geometries)
+        }, 1000);
+
+
     }
     check_scene();
 
