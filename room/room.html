@@ -41,7 +41,7 @@
         sortObjects: true;
         physicallyCorrectLights: true;
         maxCanvasWidth: 1920;
-        maxCanvasHeight: 1920;" loading-screen="enabled:false" stats>
+        maxCanvasHeight: 1920;" shadow="autoUpdate: false" loading-screen="enabled:false" stats>
             <!-- assets management system -->
             <a-assets timeout="100000">
                 <a-asset-item id="room-gltf" src="assets/models/Normal room optimized(3).glb"></a-asset-item>
@@ -95,19 +95,19 @@
             </a-entity>
 
             <!-- models-->
-            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#room-gltf" position="0 0 0"
+            <a-gltf-model shadow="cast: true; receive: true" model-info class="model" src="#room-gltf" position="0 0 0"
                           scale="1 1 1"></a-gltf-model>
-            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#arcade-gltf" position="0 0 0"
+            <a-gltf-model shadow="cast: true; receive: true" model-info class="model" src="#arcade-gltf" position="0 0 0"
                           scale="1 1 1"></a-gltf-model>
-            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#atm-gltf" position="0 0 0"
+            <a-gltf-model shadow="cast: true; receive: true" model-info class="model" src="#atm-gltf" position="0 0 0"
                           scale="1 1 1"></a-gltf-model>
-            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#chair-gltf" position="0 0 0"
+            <a-gltf-model shadow="cast: true; receive: true" model-info class="model" src="#chair-gltf" position="0 0 0"
                           scale="1 1 1"></a-gltf-model>
-            <a-gltf-model shadow="cast: true; receive: true" class="model clickable nocollision" src="#vr-gltf"
+            <a-gltf-model shadow="cast: true; receive: true" model-info class="model clickable nocollision" src="#vr-gltf"
                           simple-link="href: ../solarity-build-v-3/dist/index.html" position="0.4 1 -2.6" scale="1 1 1">
             </a-gltf-model>
             <!-- nav-mesh: protecting us from running thru walls  -->
-            <a-entity id="navmesh" class="model" gltf-model="#navmesh-gltf" visible="false" position="0 0 0">
+            <a-entity id="navmesh" model-info class="model" gltf-model="#navmesh-gltf" visible="false" position="0 0 0">
             </a-entity>
 
             <!-- lights  -->
@@ -183,7 +183,6 @@
             start_scene()
         } else {
             build_loading_screen();
-            start_loading_screen_listeners();
             sceneEl.addEventListener('loaded', start_scene);
         }
     }

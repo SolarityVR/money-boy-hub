@@ -16,6 +16,8 @@ function build_loading_screen() {
 }
 //updates loading screen based on models actually loaded
 function update_loading_screen() {
+    models = document.querySelectorAll('[model-info]')
+    models_number = models.length;
     setTimeout( function() { scene_wrapperEl.removeAttribute("style"); }, 10000);
     models_loaded++;
     if (models_loaded == 1) {
@@ -32,11 +34,11 @@ function update_loading_screen() {
         loading_screenEl.remove();
     };
 }
-//checks if model has loaded before building all of the dinamic content
+/*checks if model has loaded before building all of the dinamic content
 function start_loading_screen_listeners() {
     models = document.getElementsByClassName("model");
     models_number = models.length;
     for (i = 0; i < models_number; i++) {
         models[i].addEventListener("model-loaded", update_loading_screen)
     }
-}
+}*/

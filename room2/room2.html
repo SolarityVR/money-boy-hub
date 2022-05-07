@@ -41,7 +41,7 @@
         sortObjects: true;
         physicallyCorrectLights: true;
         maxCanvasWidth: 1920;
-        maxCanvasHeight: 1920;" loading-screen="enabled:false" stats>
+        maxCanvasHeight: 1920;" shadow="autoUpdate: false" loading-screen="enabled:false" stats>
             <!-- assets management system -->
             <a-assets timeout="100000">
                 <a-asset-item id="room2-gltf" src="assets/models/room2.glb"></a-asset-item>
@@ -92,10 +92,10 @@
             <a-entity light="type: ambient; intensity: 0.5; color:  #FFFFFF;"></a-entity>
 
             <!-- models-->
-            <a-gltf-model shadow="cast: true; receive: true" class="model" src="#room2-gltf" position="0 0 0"
+            <a-gltf-model model-info shadow="cast: true; receive: true" class="model" src="#room2-gltf" position="0 0 0"
                           scale="1 1 1"></a-gltf-model>
             <!-- nav-mesh: protecting us from running thru walls  -->
-            <a-entity id="navmesh" class="model" gltf-model="#navmesh-gltf" visible="false" position="0 0 0">
+            <a-entity id="navmesh" model-info class="model" gltf-model="#navmesh-gltf" visible="false" position="0 0 0">
             </a-entity>
 
             <a-sky src="#sky-img"></a-sky>
@@ -109,6 +109,7 @@
 
 
 <script>
+
     //acquiring sceneEL
     var sceneEl = document.querySelector('a-scene');
     //basically builds all of the dinamic content
@@ -120,7 +121,6 @@
             start_scene()
         } else {
             build_loading_screen();
-            start_loading_screen_listeners();
             sceneEl.addEventListener('loaded', start_scene);
         }
     }
@@ -128,6 +128,7 @@
         build_dynamic_content();
         choose_controls();
         pass_controls();
+        sceneEl.renderer.shadowMap.autoUpdate = true;
     }
     check_scene();
 </script>
