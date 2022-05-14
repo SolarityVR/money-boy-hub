@@ -44,7 +44,7 @@
         maxCanvasHeight: 1920;" shadow="autoUpdate: false" loading-screen="enabled:false" stats>
             <!-- assets management system -->
             <a-assets timeout="100000">
-                <a-asset-item id="room2-gltf" src="assets/models/room2.glb"></a-asset-item>
+                <a-asset-item id="room2-gltf" src="assets/models/Thomas virtual temple v2.glb"></a-asset-item>
                 <a-asset-item id="navmesh-gltf" src="assets/models/navmesh.glb"></a-asset-item>
 
                 <img id="hub-img" src="assets/images/hub.png">
@@ -55,7 +55,7 @@
             <!-- camera -->
             <a-entity id="player">
                 <a-entity simple-navmesh-constraint="navmesh:#navmesh;fall:0.5;height:1.65;" id="head"
-                          camera="fov: 70; active: true" position="0 1.65 -20" wasd-controls="acceleration: 20;"
+                          camera="fov: 70; active: true" position="0 1.65 0" wasd-controls="acceleration: 20;"
                           look-controls="pointerLockEnabled: true; reverseMouseDrag: false">
                     <a-entity id="cursor" class="mouseOnly" cursor raycaster="far: 10; objects: .clickable"
                               material="color: white; shader: flat" position="0 0 -0.3"
