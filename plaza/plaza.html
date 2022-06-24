@@ -45,13 +45,13 @@
               gltf-model="dracoDecoderPath: draco/ ;
               meshoptDecoderPath: meshopt/meshopt_decoder.js">
             <a-assets timeout="100000">
-                <a-asset-item id="structure" src="assets/models/solar punk opt.glb"></a-asset-item>
+                <a-asset-item id="structure" src="assets/models/solar punk mobile no collision.glb"></a-asset-item>
                 <!--<a-asset-item id="navmesh-gltf" src="/assets/models/navmesh.gltf"></a-asset-item>-->
 
                 <img id="sky-img" src="assets/images/sky.jpg" />
             </a-assets>
 
-            <a-entity id="player" position="0 1.65 0" look-controls="pointerLockEnabled: true; reverseMouseDrag: false"
+            <a-entity id="player" position="0 3w 0" look-controls="pointerLockEnabled: true; reverseMouseDrag: false"
                       simple-navmesh-constraint="navmesh:#navmesh;fall: 5;height:1.65;"
                       wasd-controls="acceleration: 20;">
                 <a-entity id="head" rotation="0 0 0" camera>
