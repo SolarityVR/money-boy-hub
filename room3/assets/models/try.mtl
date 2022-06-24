@@ -1,0 +1,58 @@
+# Blender MTL File: 'None'
+# Material Count: 5
+
+newmtl bake.bench
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-iy1_o716\\bake.bench.jpg
+
+newmtl bake.bench.legs
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-my385vh2\\bake.bench.leg.png
+map_d C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-my385vh2\\bake.bench.leg.png
+
+newmtl bake.budha
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-kc1u1sme\\bake.budha.jpg
+
+newmtl bake.solGod
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-mrcxe6re\\bake.solgod.jpg
+
+newmtl bake.statue
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-y6oion_w\\bake.statue.jpg

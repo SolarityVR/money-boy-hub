@@ -1,0 +1,59 @@
+# Blender MTL File: 'None'
+# Material Count: 5
+
+newmtl bake_pillars
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-bodgh48h\\bake_pillars.jpg
+
+newmtl bake_room
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-42w4fpb9\\bake_room.jpg
+
+newmtl bake_set1
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-467fcg23\\bake_set1.jpg
+
+newmtl bake_solgod1
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-ivws0pl0\\bake_solgod_gray.jpg
+map_d C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-ivws0pl0\\bake_solgod_gray.jpg
+
+newmtl bake_solgod2
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-5doc3c27\\bake_solgod_white.jpg
+map_d C:\\Users\\PIETRO~1\\AppData\\Local\\Temp\\gltfimg-5doc3c27\\bake_solgod_white.jpg
